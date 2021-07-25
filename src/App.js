@@ -2,12 +2,15 @@ import React from "react";
 import RTL from "./component/rtl";
 import { faIR } from "@material-ui/core/locale";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import PrimarySearchAppBar from "./component/NavBar";
+
 import Container from "@material-ui/core/Container";
-import MySlider from "./component/MySlider";
+
 import MyCard from "./component/myCard";
 import Ads from "./component/Ads";
 import Footer from "./component/footer";
+
+import MainLayout from "./layout/MainLayout";
+import MySlider from "./component/MySlider";
 
 const theme = createTheme(
   {
@@ -16,6 +19,7 @@ const theme = createTheme(
       fontFamily: "Samim",
     },
   },
+
   faIR
 );
 
@@ -24,11 +28,12 @@ const App = () => {
     <RTL>
       <ThemeProvider theme={theme}>
         <Container>
-          <PrimarySearchAppBar />
-          <MySlider />
-          <MyCard />
-          <Ads />
-          <Footer />
+          <MainLayout>
+            <MySlider />
+            <MyCard />
+            <Ads />
+            <Footer />
+          </MainLayout>
         </Container>
       </ThemeProvider>
     </RTL>

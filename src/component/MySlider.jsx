@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   //   flexGrow: 1,
   // },
   wrap: {
-    marginTop: "100px",
+    marginTop: "50px",
     fontFamily: "Samim",
   },
   image: {
